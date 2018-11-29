@@ -30,6 +30,7 @@ def show(data, query):
               bcolors.DARKCYAN ,'Rating: ' , bcolors.ENDC,
               item['rating'], '\n',
               )
+    return 'Hope to see you again :)'
 
 
 def get_loc():
@@ -43,15 +44,14 @@ def get_places(placeType):
     lat, long = get_loc()
     gmaps = googlemaps.Client(key='AIzaSyBmm69zn5d5KfDNAct9DHTVs9CR0EKq_Ro')
     response = gmaps.places(query=placeType ,location=(lat,long))
-    show(response['results'], placeType)
+    return show(response['results'], placeType)
 
 
 def main():
     parser = argparse.ArgumentParser(description='Find places around you, default place is hotel')
     parser.add_argument('--near', type=str, default='hotel', help='What type of place you are looking for?')
     args = parser.parse_args()
-    get_places(args.near)
-
+    return get_places(args.near)
 
 
 if __name__ == "__main__":

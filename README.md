@@ -8,10 +8,7 @@ You can take a look at the code on my [github](https://github.com/rishabh570/aro
 
 You can install this package from [PyPi](https://pypi.org/):
 
-```
-pip install aroundme
-
-```
+`pip install aroundme`
 
 ## How to Use
 
