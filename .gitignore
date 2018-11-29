@@ -1,1 +1,4 @@
 aroundme/__pycache__/
+build/
+dist/
+aroundme.egg-info
