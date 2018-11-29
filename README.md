@@ -2,7 +2,7 @@
 
 **aroundme** is a basic utility that lets you find interesting places around you just by providing the kind of place you are looking for.
 
-You can take a look at the code on my [github](https://github.com/rishabh570/what-is-around).
+You can take a look at the code on my [github](https://github.com/rishabh570/aroundme).
 
 ## Installation
 
