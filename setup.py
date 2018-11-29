@@ -11,7 +11,7 @@ with open(os.path.join(HERE, "README.md")) as fid:
 
 setup(name="aroundme",
       version="1.0",
-      description="Find interesting places around you",
+      description="Find interesting places around you.",
       long_description=README,
       long_description_content_type="text/markdown",
       url="https://github.com/rishabh570/what-is-around",

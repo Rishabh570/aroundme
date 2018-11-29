@@ -15,5 +15,5 @@ pip install aroundme
 
 ## How to Use
 
-You can just run `aroundme` to get a list of hotels around you. Take a look at `aroundme --help` to see the help message.
+You can just run `aroundme` to get a list of hotels around you, you can provide what you're looking for though. Take a look at `aroundme --help` to see the help message.
 
