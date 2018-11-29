@@ -1,18 +1,27 @@
+import os.path
 from setuptools import setup
 
-setup(name="what's around",
+# The directory containing this file
+HERE = os.path.abspath(os.path.dirname(__file__))
+
+# The text of the README file
+with open(os.path.join(HERE, "README.md")) as fid:
+    README = fid.read()
+
+
+setup(name="aroundme",
       version="1.0",
-      description="Find good places around you",
+      description="Find interesting places around you",
       long_description=README,
       long_description_content_type="text/markdown",
       url="https://github.com/rishabh570/what-is-around",
-      author="rishabh rawat",
+      author="Rishabh Rawat",
       author_email="icode365@gmail.com",
       license="MIT",
-      packages=["app"],
+      packages=["aroundme"],
       include_package_data=True,
       install_requires=["googlemaps"],
       entry_points={
-        "console_scripts": ["what's around = app.__main__:main"]
+        "console_scripts": ["aroundme=aroundme.__main__:main"]
       },
       )
