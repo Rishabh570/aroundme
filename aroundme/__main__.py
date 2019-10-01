@@ -3,6 +3,7 @@ import argparse
 import requests
 import googlemaps
 
+# This class provides color options
 class bcolors:
     HEADER = '\033[95m'
     PURPLE = '\033[95m'
