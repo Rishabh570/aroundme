@@ -16,6 +16,7 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+# This is a utility function, shows data to the user
 def show(data, query):
     print("\n\n\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/")
     print('\n', bcolors.OKBLUE, bcolors.BOLD, bcolors.HEADER, "Here's a list of {} near you".format(query), bcolors.ENDC, '\n')
@@ -33,6 +34,7 @@ def show(data, query):
     return 'Hope to see you again :)'
 
 
+# Gets the location of the user
 def get_loc():
     response = requests.get('http://api.ipstack.com/103.87.58.6?access_key=f42c4374d0ef9c61749c6c0e1671f200').json()
     lat = response['latitude']
@@ -40,6 +42,7 @@ def get_loc():
     return lat, long
 
 
+# Searches places of particular type near user's current location
 def get_places(placeType):
     lat, long = get_loc()
     gmaps = googlemaps.Client(key='AIzaSyBmm69zn5d5KfDNAct9DHTVs9CR0EKq_Ro')
@@ -47,6 +50,7 @@ def get_places(placeType):
     return show(response['results'], placeType)
 
 
+# This is the main function
 def main():
     parser = argparse.ArgumentParser(description='Find places around you, default place is hotel')
     parser.add_argument('--near', type=str, default='hotel', help='What type of place you are looking for?')
